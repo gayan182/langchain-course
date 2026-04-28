@@ -66,7 +66,7 @@ def run_agent(question: str) -> str:
             return ai_message.content
         tool_call = tool_calls[0]
         tool_name = tool_call.get("name")
-        tool_args = tool_call.get("args", {})
+        tool_args =tool_call.get("args", {})
         tool_call_id = tool_call.get("id")
 
         print(f"  [Tool Selected] {tool_name} with args: {tool_args}")
